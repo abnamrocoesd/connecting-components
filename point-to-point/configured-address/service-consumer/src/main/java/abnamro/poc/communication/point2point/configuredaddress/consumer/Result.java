@@ -1,4 +1,4 @@
-package abnamro.poc.communication.point2point.fixedip.consumer;
+package abnamro.poc.communication.point2point.configuredaddress.consumer;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package abnamro.poc.communication.point2point.fixedip.consumer;
+package abnamro.poc.communication.point2point.configuredaddress.consumer;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;

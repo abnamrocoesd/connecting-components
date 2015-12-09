@@ -1,4 +1,4 @@
-package abnamro.poc.communication.point2point.fixedip.provider;
+package abnamro.poc.communication.point2point.configuredaddress.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
