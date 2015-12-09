@@ -15,6 +15,7 @@
     </properties>
 
     <modules>
+        <module>eureka-server</module>
         <module>service-consumer</module>
         <module>service-provider</module>
     </modules>
