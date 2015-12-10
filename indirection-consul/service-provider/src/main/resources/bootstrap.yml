@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: myService
+  cloud:
+    consul:
+      host: localhost
+      host: 172.17.0.2
+#      port: 8500
+      discovery:
+        health-check-interval: 15s
+        instance-id: myService
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
