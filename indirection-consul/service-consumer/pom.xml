@@ -8,25 +8,39 @@
     <artifactId>service-consumer</artifactId>
     <packaging>jar</packaging>
 
-    <parent>
-        <groupId>comm-poc.indirection</groupId>
-        <artifactId>consul</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-    
-    <dependencies>
-        <!--&lt;!&ndash; for message conversion &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-web</artifactId>-->
-            <!--<version>1.2.2.RELEASE</version>-->
-        <!--</dependency>-->
+    <!--<parent>-->
+        <!--<groupId>comm-poc.indirection</groupId>-->
+        <!--<artifactId>consul</artifactId>-->
+        <!--<version>0.0.1-SNAPSHOT</version>-->
+    <!--</parent>-->
 
-        <!-- Spring based feign client -->
+    <parent>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-consul</artifactId>
+        <version>1.0.0.M4</version>
+    </parent>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-all</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
-            <version>1.0.0.RELEASE</version>
+            <version>${spring-cloud-netflix.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.2</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- for testing -->
@@ -44,4 +58,15 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>http://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>

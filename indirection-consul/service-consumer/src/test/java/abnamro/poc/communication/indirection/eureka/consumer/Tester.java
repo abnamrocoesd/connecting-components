@@ -15,14 +15,14 @@ import static junit.framework.Assert.assertNotNull;
 @WebIntegrationTest
 public class Tester {
     @Autowired
-    Client client;
+    ClientInitializer app;
 
 	/**
     * This test requires the service to run on port 9000
     */
    @Test
     public void doTest() {
-        Result result = client.upsert("test");
+        Result result = app.client.upsert("test");
         assertNotNull(result);
         assertEquals("test", result.getLastAuthor());
      }
